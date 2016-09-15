@@ -32,10 +32,13 @@ public class ITJPchapter12exercise6 {
             for (int i = 0; i < hex.length(); i++) {
 
                 if (!(hex.charAt(i) >= '0' && hex.charAt(i) <= '9') ||
-                        !(hex.charAt(i) >= 'A' && hex.charAt(i) <= 'F'))
+                        !(hex.charAt(i) >= 'A' && hex.charAt(i) <= 'F')) {
                     throw new NumberFormatException("String is not a hex string");
-                char hexChar = hex.charAt(i);
-                decimalValue = decimalValue * 16 + hexCharToDecimal(hexChar);
+                }
+                    char hexChar = hex.charAt(i);
+
+                    decimalValue = decimalValue * 16 + hexCharToDecimal(hexChar);
+
             }
 
             return decimalValue;
